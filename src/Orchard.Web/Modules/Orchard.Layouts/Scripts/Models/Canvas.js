@@ -3,7 +3,7 @@
 
     LayoutEditor.Canvas = function (data, htmlId, htmlClass, htmlStyle, isTemplated, children) {
         LayoutEditor.Element.call(this, "Canvas", data, htmlId, htmlClass, htmlStyle, isTemplated);
-        LayoutEditor.Container.call(this, ["Grid", "Content"], children);
+        LayoutEditor.Container.call(this, ["Grid", "Content", "Placeholder"], children);
 
         this.toObject = function () {
             var result = this.elementToObject();

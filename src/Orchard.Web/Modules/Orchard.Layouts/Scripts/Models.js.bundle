@@ -16,6 +16,7 @@
         <file>Models/Container.js</file>
         <file>Models/Canvas.js</file>
         <file>Models/Grid.js</file>
+        <file>Models/Placeholder.js</file>
         <file>Models/Row.js</file>
         <file>Models/Column.js</file>
         <file>Models/Content.js</file>

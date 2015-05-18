@@ -50,6 +50,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -61,9 +62,181 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="churchatthecross\Elements\Placeholder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="churchatthecross\images\assets\ajax-loader.gif" />
+    <Content Include="churchatthecross\images\assets\error.gif" />
+    <Content Include="churchatthecross\images\assets\success.gif" />
+    <Content Include="churchatthecross\images\checkers.png" />
+    <Content Include="churchatthecross\images\dashed.png" />
+    <Content Include="churchatthecross\images\img_avatar.png" />
+    <Content Include="churchatthecross\images\loader.gif" />
+    <Content Include="churchatthecross\images\logo%402x.png" />
+    <Content Include="churchatthecross\images\logo.png" />
+    <Content Include="churchatthecross\images\pattern.png" />
+    <Content Include="churchatthecross\images\patterns\pt1.png" />
+    <Content Include="churchatthecross\images\patterns\pt10.png" />
+    <Content Include="churchatthecross\images\patterns\pt11.jpg" />
+    <Content Include="churchatthecross\images\patterns\pt12.jpg" />
+    <Content Include="churchatthecross\images\patterns\pt13.jpg" />
+    <Content Include="churchatthecross\images\patterns\pt14.jpg" />
+    <Content Include="churchatthecross\images\patterns\pt15.jpg" />
+    <Content Include="churchatthecross\images\patterns\pt16.png" />
+    <Content Include="churchatthecross\images\patterns\pt17.png" />
+    <Content Include="churchatthecross\images\patterns\pt18.png" />
+    <Content Include="churchatthecross\images\patterns\pt19.png" />
+    <Content Include="churchatthecross\images\patterns\pt2.png" />
+    <Content Include="churchatthecross\images\patterns\pt20.png" />
+    <Content Include="churchatthecross\images\patterns\pt21.png" />
+    <Content Include="churchatthecross\images\patterns\pt22.png" />
+    <Content Include="churchatthecross\images\patterns\pt23.png" />
+    <Content Include="churchatthecross\images\patterns\pt24.png" />
+    <Content Include="churchatthecross\images\patterns\pt25.png" />
+    <Content Include="churchatthecross\images\patterns\pt26.png" />
+    <Content Include="churchatthecross\images\patterns\pt27.png" />
+    <Content Include="churchatthecross\images\patterns\pt28.png" />
+    <Content Include="churchatthecross\images\patterns\pt29.png" />
+    <Content Include="churchatthecross\images\patterns\pt3.png" />
+    <Content Include="churchatthecross\images\patterns\pt30.png" />
+    <Content Include="churchatthecross\images\patterns\pt4.png" />
+    <Content Include="churchatthecross\images\patterns\pt5.png" />
+    <Content Include="churchatthecross\images\patterns\pt6.png" />
+    <Content Include="churchatthecross\images\patterns\pt7.png" />
+    <Content Include="churchatthecross\images\patterns\pt8.png" />
+    <Content Include="churchatthecross\images\patterns\pt9.png" />
+    <Content Include="churchatthecross\images\wave.png" />
+    <Content Include="churchatthecross\scripts\bootstrap.js" />
+    <Content Include="churchatthecross\scripts\helper-plugins.js" />
+    <Content Include="churchatthecross\scripts\home.js" />
+    <Content Include="churchatthecross\scripts\init.js" />
+    <Content Include="churchatthecross\scripts\jquery-2.0.0.min.js" />
+    <Content Include="churchatthecross\scripts\modernizr.js" />
+    <Content Include="churchatthecross\scripts\revolution-slider-init.js" />
+    <Content Include="churchatthecross\scripts\vendor\countdown\js\jquery.countdown.min.js" />
+    <Content Include="churchatthecross\scripts\vendor\flexslider\css\flexslider.css" />
+    <Content Include="churchatthecross\scripts\vendor\flexslider\js\jquery.flexslider.js" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\background.png" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\bigplay.png" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\bigplay.svg" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\controls-ted.png" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\controls-wmp-bg.png" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\controls-wmp.png" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\controls.png" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\controls.svg" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\flashmediaelement-cdn.swf" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\flashmediaelement.swf" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\loading.gif" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\mediaelement-and-player.min.js" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\mediaelementplayer.css" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\mejs-skins.css" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\silverlightmediaelement.xap" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\css\prettyPhoto.css" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\dark_rounded\btnNext.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\dark_rounded\btnPrevious.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\dark_rounded\contentPattern.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\dark_rounded\default_thumbnail.gif" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\dark_rounded\loader.gif" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\dark_rounded\sprite.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\dark_square\btnNext.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\dark_square\btnPrevious.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\dark_square\contentPattern.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\dark_square\default_thumbnail.gif" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\dark_square\loader.gif" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\dark_square\sprite.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\default\default_thumb.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\default\loader.gif" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\default\sprite.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\default\sprite_next.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\default\sprite_prev.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\default\sprite_x.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\default\sprite_y.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\facebook\btnNext.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\facebook\btnPrevious.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\facebook\contentPatternBottom.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\facebook\contentPatternLeft.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\facebook\contentPatternRight.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\facebook\contentPatternTop.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\facebook\default_thumbnail.gif" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\facebook\loader.gif" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\facebook\sprite.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\light_rounded\btnNext.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\light_rounded\btnPrevious.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\light_rounded\default_thumbnail.gif" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\light_rounded\loader.gif" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\light_rounded\sprite.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\light_square\btnNext.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\light_square\btnPrevious.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\light_square\default_thumbnail.gif" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\light_square\loader.gif" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\light_square\sprite.png" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\js\prettyphoto.js" />
+    <Content Include="churchatthecross\styles\animations.css" />
+    <Content Include="churchatthecross\styles\bootstrap-theme.css" />
+    <Content Include="churchatthecross\styles\bootstrap.css" />
+    <Content Include="churchatthecross\styles\custom.css" />
+    <Content Include="churchatthecross\styles\font-awesome.css" />
+    <Content Include="churchatthecross\styles\fonts\fontawesome-webfont.svg" />
+    <Content Include="churchatthecross\styles\fonts\outlined-iconset.svg" />
+    <Content Include="churchatthecross\styles\ie.css" />
+    <Content Include="churchatthecross\styles\line-icons.css" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\background.png" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\bigplay.png" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\bigplay.svg" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\controls-ted.png" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\controls-wmp-bg.png" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\controls-wmp.png" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\controls.png" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\controls.svg" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\flashmediaelement-cdn.swf" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\flashmediaelement.swf" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\loading.gif" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\mediaelement-and-player.min.js" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\mediaelementplayer.css" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\mejs-skins.css" />
+    <Content Include="churchatthecross\styles\vendor\mediaelement\silverlightmediaelement.xap" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\css\prettyPhoto.css" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\dark_rounded\btnNext.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\dark_rounded\btnPrevious.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\dark_rounded\contentPattern.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\dark_rounded\default_thumbnail.gif" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\dark_rounded\loader.gif" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\dark_rounded\sprite.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\dark_square\btnNext.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\dark_square\btnPrevious.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\dark_square\contentPattern.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\dark_square\default_thumbnail.gif" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\dark_square\loader.gif" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\dark_square\sprite.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\default\default_thumb.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\default\loader.gif" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\default\sprite.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\default\sprite_next.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\default\sprite_prev.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\default\sprite_x.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\default\sprite_y.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\facebook\btnNext.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\facebook\btnPrevious.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\facebook\contentPatternBottom.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\facebook\contentPatternLeft.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\facebook\contentPatternRight.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\facebook\contentPatternTop.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\facebook\default_thumbnail.gif" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\facebook\loader.gif" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\facebook\sprite.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\light_rounded\btnNext.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\light_rounded\btnPrevious.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\light_rounded\default_thumbnail.gif" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\light_rounded\loader.gif" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\light_rounded\sprite.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\light_square\btnNext.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\light_square\btnPrevious.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\light_square\default_thumbnail.gif" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\light_square\loader.gif" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\light_square\sprite.png" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\js\prettyphoto.js" />
+    <Content Include="churchatthecross\styles\style.css" />
     <Content Include="TheAdmin\Scripts\admin.js" />
     <Content Include="TheAdmin\Styles\ie.css" />
     <Content Include="TheAdmin\Styles\ie7.css" />
@@ -85,6 +258,9 @@
     <Content Include="TheAdmin\Styles\images\menuOpenHover.gif" />
     <Content Include="TheAdmin\Styles\images\vinesBackgroundBottom.gif" />
     <Content Include="TheAdmin\Styles\images\menu-filter.png" />
+    <Content Include="churchatthecross\Theme.png" />
+    <Content Include="churchatthecross\Theme.txt" />
+    <Content Include="churchatthecross\ThemeZonePreview.png" />
     <Content Include="TheThemeMachine\Styles\Site.css" />
     <Content Include="TheThemeMachine\Theme.png" />
     <Content Include="TheThemeMachine\Theme.txt" />
@@ -160,6 +336,10 @@
       <Name>Orchard.Framework</Name>
       <Private>True</Private>
     </ProjectReference>
+    <ProjectReference Include="..\Modules\Orchard.Layouts\Orchard.Layouts.csproj">
+      <Project>{6bd8b2fa-f2e3-4ac8-a4c3-2925a653889a}</Project>
+      <Name>Orchard.Layouts</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="TheThemeMachine\Views\Pager.cshtml" />
@@ -171,6 +351,69 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="TheAdmin\Views\AdminCultureSelector.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="churchatthecross\Placement.info" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="churchatthecross\styles\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="churchatthecross\Views\Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="churchatthecross\Views\Pager.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="churchatthecross\Views\Pager.First.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="churchatthecross\Views\Pager.Last.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="churchatthecross\Views\Document.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="churchatthecross\styles\fonts\fontawesome-webfont.eot" />
+    <Content Include="churchatthecross\styles\fonts\fontawesome-webfont.ttf" />
+    <Content Include="churchatthecross\styles\fonts\fontawesome-webfont.woff" />
+    <Content Include="churchatthecross\styles\fonts\FontAwesome.otf" />
+    <Content Include="churchatthecross\styles\fonts\outlined-iconset.eot" />
+    <Content Include="churchatthecross\styles\fonts\outlined-iconset.ttf" />
+    <Content Include="churchatthecross\styles\fonts\outlined-iconset.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="churchatthecross\styles\vendor\mediaelement\.DS_Store" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\.DS_Store" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\css\.DS_Store" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\images\.DS_Store" />
+    <Content Include="churchatthecross\styles\vendor\prettyphoto\js\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="churchatthecross\scripts\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="churchatthecross\scripts\vendor\countdown\.DS_Store" />
+    <Content Include="churchatthecross\scripts\vendor\countdown\js\.DS_Store" />
+    <Content Include="churchatthecross\scripts\vendor\flexslider\.DS_Store" />
+    <Content Include="churchatthecross\scripts\vendor\flexslider\css\.DS_Store" />
+    <Content Include="churchatthecross\scripts\vendor\flexslider\js\.DS_Store" />
+    <Content Include="churchatthecross\scripts\vendor\mediaelement\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\.DS_Store" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\css\.DS_Store" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\images\.DS_Store" />
+    <Content Include="churchatthecross\scripts\vendor\prettyphoto\js\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="churchatthecross\images\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

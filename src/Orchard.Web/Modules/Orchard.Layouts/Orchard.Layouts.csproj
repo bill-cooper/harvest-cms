@@ -105,6 +105,7 @@
     <Content Include="Scripts\LayoutEditor\Directives\Child.js" />
     <Content Include="Scripts\LayoutEditor\Directives\Column.js" />
     <Content Include="Scripts\LayoutEditor\Directives\Content.js" />
+    <Content Include="Scripts\LayoutEditor\Directives\Placeholder.js" />
     <Content Include="Scripts\LayoutEditor\Directives\ToolboxGroup.js" />
     <Content Include="Scripts\LayoutEditor\Directives\Toolbox.js" />
     <Content Include="Scripts\LayoutEditor\Directives\Grid.js" />
@@ -134,6 +135,7 @@
     <Content Include="Scripts\Models\Html.js" />
     <Content Include="Scripts\Models\Grid.js" />
     <Content Include="Scripts\Models\Helpers.js" />
+    <Content Include="Scripts\Models\Placeholder.js" />
     <Content Include="Scripts\Models\Row.js" />
     <Content Include="Scripts\LayoutDecoder.js" />
     <Content Include="Scripts\dialog.js" />
@@ -615,6 +617,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\LayoutEditor.Template.Html.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\LayoutEditor.Template.Placeholder.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Elements\Placeholder.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

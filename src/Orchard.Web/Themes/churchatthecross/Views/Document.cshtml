@@ -1,0 +1,50 @@
+﻿@using Orchard.Localization
+@using Orchard.Mvc.Html;
+@using Orchard.UI.Resources;
+@{
+    // RegisterLink(new LinkEntry {Type = "image/x-icon", Rel = "shortcut icon", Href = Url.Content("~/modules/orchard.themes/Content/orchard.ico")});
+    Script.Require("Html5Shiv").UseCondition("lt IE 9").AtHead();
+    Style.Include("bootstrap.css");
+    Style.Include("bootstrap-theme.css");
+    Style.Include("style.css");
+    Style.Include("vendor/prettyphoto/css/prettyPhoto.css");
+    Style.Include("vendor/mediaelement/mediaelementplayer.css");
+    Script.Include("modernizr.js").AtHead();
+
+    Script.Include("jquery-2.0.0.min.js").AtFoot();
+    Script.Include("vendor/prettyphoto/js/prettyphoto.js").AtFoot();
+    Script.Include("helper-plugins.js").AtFoot();
+    Script.Include("bootstrap.js").AtFoot();
+    Script.Include("init.js").AtFoot();
+    Script.Include("home.js").AtFoot();
+    Script.Include("vendor/flexslider/js/jquery.flexslider.js").AtFoot();
+    Script.Include("vendor/countdown/js/jquery.countdown.min.js").AtFoot();
+    Script.Include("vendor/mediaelement/mediaelement-and-player.min.js").AtFoot();
+    Script.Include("http://maps.googleapis.com/maps/api/js?sensor=false").AtFoot();
+
+
+    string title = Convert.ToString(Model.Title);
+    string siteName = Convert.ToString(WorkContext.CurrentSite.SiteName);
+}
+<!DOCTYPE html> 
+<html class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>@Html.Title(title, siteName)</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    @Display(Model.Head)
+</head>
+<body class="home">
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+    <div class="body">
+        @Display(Model.Body)
+        @Display(Model.Tail)
+    </div>
+</body>
+</html>

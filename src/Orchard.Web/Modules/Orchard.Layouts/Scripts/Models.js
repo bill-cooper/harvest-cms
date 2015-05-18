@@ -16,7 +16,8 @@
         factories[type] = factory;
     };
 
-    registerFactory("Grid", function(value) { return LayoutEditor.Grid.from(value); });
+    registerFactory("Grid", function (value) { return LayoutEditor.Grid.from(value); });
+    registerFactory("Placeholder", function (value) { return LayoutEditor.Placeholder.from(value); });
     registerFactory("Row", function(value) { return LayoutEditor.Row.from(value); });
     registerFactory("Column", function(value) { return LayoutEditor.Column.from(value); });
     registerFactory("Content", function(value) { return LayoutEditor.Content.from(value); });
@@ -389,7 +390,7 @@ var LayoutEditor;
 
     LayoutEditor.Canvas = function (data, htmlId, htmlClass, htmlStyle, isTemplated, children) {
         LayoutEditor.Element.call(this, "Canvas", data, htmlId, htmlClass, htmlStyle, isTemplated);
-        LayoutEditor.Container.call(this, ["Grid", "Content"], children);
+        LayoutEditor.Container.call(this, ["Grid", "Content", "Placeholder"], children);
 
         this.toObject = function () {
             var result = this.elementToObject();
@@ -426,6 +427,35 @@ var LayoutEditor;
 
     LayoutEditor.Grid.from = function (value) {
         var result = new LayoutEditor.Grid(
+            value.data,
+            value.htmlId,
+            value.htmlClass,
+            value.htmlStyle,
+            value.isTemplated,
+            LayoutEditor.childrenFrom(value.children));
+        result.toolboxIcon = value.toolboxIcon;
+        result.toolboxLabel = value.toolboxLabel;
+        result.toolboxDescription = value.toolboxDescription;
+        return result;
+    };
+
+})(LayoutEditor || (LayoutEditor = {}));
+var LayoutEditor;
+(function (LayoutEditor) {
+
+    LayoutEditor.Placeholder = function (data, htmlId, htmlClass, htmlStyle, isTemplated, children) {
+        LayoutEditor.Element.call(this, "Placeholder", data, htmlId, htmlClass, htmlStyle, isTemplated);
+        LayoutEditor.Container.call(this, ["Grid","Html"], children);
+
+        this.toObject = function () {
+            var result = this.elementToObject();
+            result.children = this.childrenToObject();
+            return result;
+        };
+    };
+
+    LayoutEditor.Placeholder.from = function (value) {
+        var result = new LayoutEditor.Placeholder(
             value.data,
             value.htmlId,
             value.htmlClass,

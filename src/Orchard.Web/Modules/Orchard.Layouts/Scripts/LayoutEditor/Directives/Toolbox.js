@@ -17,6 +17,15 @@
                                     children: []
                                 })
                             ];
+                            $scope.placeholderElements = [
+                                LayoutEditor.Placeholder.from({
+                                    toolboxIcon: "\uf00a",
+                                    toolboxLabel: "Placeholder",
+                                    toolboxDescription: "Empty placeholder container.",
+                                    children: []
+                                })
+                            ];
+
 
                             $scope.rowElements = [
                                 LayoutEditor.Row.from({
@@ -109,6 +118,10 @@
 
                             switch (type) {
                                 case "Grid":
+                                    parentClasses = [".layout-canvas", ".layout-column", ".layout-common-holder"];
+                                    placeholderClasses = "layout-element layout-container layout-grid ui-sortable-placeholder";
+                                    break;
+                                case "Placeholder":
                                     parentClasses = [".layout-canvas", ".layout-column", ".layout-common-holder"];
                                     placeholderClasses = "layout-element layout-container layout-grid ui-sortable-placeholder";
                                     break;

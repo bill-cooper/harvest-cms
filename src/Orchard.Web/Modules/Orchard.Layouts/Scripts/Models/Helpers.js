@@ -16,7 +16,8 @@
         factories[type] = factory;
     };
 
-    registerFactory("Grid", function(value) { return LayoutEditor.Grid.from(value); });
+    registerFactory("Grid", function (value) { return LayoutEditor.Grid.from(value); });
+    registerFactory("Placeholder", function (value) { return LayoutEditor.Placeholder.from(value); });
     registerFactory("Row", function(value) { return LayoutEditor.Row.from(value); });
     registerFactory("Column", function(value) { return LayoutEditor.Column.from(value); });
     registerFactory("Content", function(value) { return LayoutEditor.Content.from(value); });

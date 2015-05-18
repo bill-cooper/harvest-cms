@@ -1,0 +1,10 @@
+﻿Name: harvest.Layouts
+AntiForgery: enabled
+Author: HarvestCms.org
+Website: http://harvestcms.org
+Version: 1.0
+OrchardVersion: 1.0
+Description: Extends the layouts module
+Features:
+    harvest.Layouts:
+        Description: Extends the layouts module.
